@@ -1,0 +1,221 @@
+body {
+    font-family: 'Roboto Slab', serif; /* Cambia la fuente a Roboto Slab */
+    margin: 0;
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: #d6c358; /* Color amarillo claro */
+    color: black;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Efecto de agrandamiento */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más marcada */
+}
+
+/* Efecto dinámico en los títulos */
+h1, h2 {
+    font-family: 'Lobster', cursive; /* Fuente más llamativa para los títulos */
+    margin: 10px 0;
+    color: black;
+    position: relative;
+    display: inline-block;
+    font-weight: 600;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Sombra de texto animada en hover */
+h1:hover, h2:hover {
+    color: #c2a214;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra de texto */
+}
+
+/* Animación de desvanecimiento al cargar la página */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px); /* Los títulos aparecerán desde arriba */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Posición final */
+    }
+}
+
+h1, h2 {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Efecto de subrayado animado */
+h1::after, h2::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #c2a214;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+h1:hover::after, h2:hover::after {
+    width: 100%; /* El subrayado se expande en hover */
+}
+
+.group-section {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.card {
+    flex: 1 1 calc(33.333% - 20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    min-height: 250px;
+    padding: 20px;
+    background-color: rgb(209, 203, 111);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 1.5rem; /* Aumenta el tamaño del texto */
+    font-weight: bold; /* Hace que el texto sea más grueso */
+    margin-bottom: 15px; /* Espaciado inferior */
+    color: #030303; /* Color llamativo para los títulos */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.btn {
+    align-self: flex-end;
+    background-color: #daa83e;
+    color: rgb(11, 11, 12);
+    transition: background-color 0.3s;
+    border: none;
+    outline: none;
+}
+
+.btn:hover {
+    background-color: #c2a214;
+}
+
+/* Estilos para el estado focus (cuando el botón es seleccionado) */
+.btn:focus {
+    background-color: #c2a214;
+    box-shadow: 0 0 5px #c2a214; /* Añadir sombra en focus */
+}
+
+.btn-secondary {
+    background-color: #dee050;
+}
+
+.btn-secondary:hover, .btn-secondary:focus {
+    background-color: #e6db78;
+    box-shadow: 0 0 5px #e6db78;
+}
+
+.btn-primary {
+    background-color: #dee050;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: #e6db78;
+    box-shadow: 0 0 5px #e6db78;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(45deg, #333, #555); /* Degradado de color */
+    color: #fff;
+    padding: 30px 0;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+    font-family: 'Roboto Slab', serif;
+}
+
+.social-icons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    color: #ddd;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ffcc00;
+    transform: scale(1.2);
+}
+
+footer a {
+    text-decoration: none;
+    color: #ddd;
+    font-weight: 500;
+    transition: color 0.3s, transform 0.3s;
+}
+
+footer a:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+footer:hover {
+    background: linear-gradient(45deg, #444, #666);
+}
+
+@keyframes fadeInFooter {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    animation: fadeInFooter 1.5s ease-out;
+}
